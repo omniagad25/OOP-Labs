@@ -14,7 +14,7 @@ Stack(int _size){
     arr= new int[size]{0};
 }
 
-int get_t(){
+int get_t(void){
     return t;
 }
 
@@ -49,6 +49,7 @@ int pop(){
     else{
 
         cout<<"The stack is empty"<<endl;
+        return -10;
     }
 }
  friend void viewContent(Stack s);
