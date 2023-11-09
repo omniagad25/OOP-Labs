@@ -23,7 +23,7 @@ public:
     delete[] arr;
 }
     bool isEmpty() {
-    if(size == 0){
+    if(rear == -1){
         return 1;
     }
     else{
@@ -51,7 +51,7 @@ public:
 
     int dequeue(){
     if (isEmpty()){
-        cout << "The queue is empty\n";
+        cout << "The queue is empty\n"<<endl;
         return 0;
     }
     else{
@@ -70,16 +70,6 @@ public:
 int main()
 {
     Queue q(5);
-    /*q.enqueue(5);
-    q.enqueue(4);
-    q.enqueue(3);
-    q.enqueue(2);
-    q.enqueue(1);
-    q.dequeue();*/
-    /*q.enqueue(2);
-    q.enqueue(3);
-    q.enqueue(4);
-    viewContent(s)*/
     q.dequeue();
     q.enqueue(5);
     q.enqueue(7);
