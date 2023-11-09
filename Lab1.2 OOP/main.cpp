@@ -3,7 +3,6 @@
 using namespace std;
 
 class Complex{
-private:
     int real;
     int imagine;
 public:
@@ -68,11 +67,22 @@ Complex sub(Complex c,Complex x){
       return r;
 }
 
+void complex_display(Complex c){
+    cout<< c.getReal();
+    if(c.getImagine()>0){
+        cout<<"+"<<c.getImagine()<<"j"<<endl;
+    }
+    else if(c.getImagine()<0){
+        cout<<c.getImagine()<<"j"<<endl;
+    }
+}
+
 int main() //standAlone Fun
 {
     Complex x,u;
     u.setReal(5);
-    u.setImagine(6);
+    u.setImagine(-6);
+    u.print();
     x.setReal(5);
     x.setImagine(6);
     x.print();
@@ -82,3 +92,4 @@ int main() //standAlone Fun
 
     return 0;
 }
+
