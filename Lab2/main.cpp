@@ -13,7 +13,16 @@ Stack(int _size){
     t=-1;
     arr= new int[size]{0};
 }
+//deep
+Stack (Stack &s)
+{
+    size=s.size;
+    t=s.t;
+    for (int i=0;i<=t;i++){
+            arr[i]=s.arr[i];
 
+    }
+}
 int get_t(void){
     return t;
 }
@@ -70,17 +79,38 @@ void viewContent(Stack s){
 }
 
 int main()
-{
+{/*
+    Stack s(5);
+    Stack cpy = s;
+    cout<<"The deleted number is "<<cpy.pop()<<endl;  //empty
+    cpy.push(1);
+    cpy.push(5);
+    cpy.push(6);
+    cout<<"The deleted number is "<<cpy.pop()<<endl;//6
+    cout<<"The deleted number is "<<cpy.pop()<<endl;//5
+    cpy.push(7);
+    cout<<"The deleted number is "<<cpy.pop()<<endl;//7
+    cout<<"The deleted number is "<<cpy.pop()<<endl;//1
+    cout<<"The deleted number is "<<cpy.pop()<<endl;//Empty
+    cpy.push(7);
+    cout<<"The deleted number is "<<cpy.pop()<<endl;//7
+
+
+   viewContent(cpy);
+    if(cpy.get_t()==-1){
+        cout<<-5<<endl;
+    }
+*/
     Stack s(5);
     cout<<"The deleted number is "<<s.pop()<<endl;  //empty
     s.push(1);
     s.push(5);
     s.push(6);
-    cout<<"The deleted number is "<<s.pop()<<endl;//1
+    cout<<"The deleted number is "<<s.pop()<<endl;//6
     cout<<"The deleted number is "<<s.pop()<<endl;//5
     s.push(7);
-    cout<<"The deleted number is "<<s.pop()<<endl;//6
     cout<<"The deleted number is "<<s.pop()<<endl;//7
+    cout<<"The deleted number is "<<s.pop()<<endl;//1
     cout<<"The deleted number is "<<s.pop()<<endl;//Empty
     s.push(7);
     cout<<"The deleted number is "<<s.pop()<<endl;//7
@@ -90,6 +120,5 @@ int main()
     if(s.get_t()==-1){
         cout<<-5<<endl;
     }
-
     return 0;
 }
