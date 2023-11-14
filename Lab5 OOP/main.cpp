@@ -46,6 +46,9 @@ class Line
         Line(int p1x,int p1y, int p2x,int p2y){
             lp1.set_xy(p1x,p1y);
             lp2.set_xy(p2x,p2y);
+            line(p1x,p1y,p2x,p2y);
+            getch();
+            closegraph();
         }
 
         void setPoints(Point *p1,Point *p2){
@@ -99,6 +102,9 @@ public:
     void set_circlePara(int x,int y ,int _radius){
           p.set_xy(x,y);
           radius= _radius;
+          circle(x,y,_radius);
+          getch();
+          closegraph();
     }
     void enterPoint(Point *p){
      ptr=p;
@@ -129,21 +135,20 @@ initgraph(&gdriver,&gmode,"d:\\tc\\bgi");
     Point p1(20,20);
     Point p2(10,10);
     Line l1;
+    l1=Line(400,300,200,300);
     l1.setPoints(&p1,&p2);
     l1.paintLine2();
-    line(300,400,500,400);
-    getch();
+
+    //getch();
     //closegraph();
    Circle c1;
-   c1.set_circlePara(5,6,2);
+   c1.set_circlePara(300,200,150);
    c1.paintCircle();
    Point p3(10,20);
    c1.enterPoint(&p3);
    c1.paintCircle2();
    Point p4 (50,50);
    c1.paintCircle(p4);
-   Circle(30,50,20);
-    getch();
-    closegraph();
+
     return 0;
 }
