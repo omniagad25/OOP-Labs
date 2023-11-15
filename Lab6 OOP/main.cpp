@@ -39,12 +39,14 @@ class Point
                 void setColor(int _color){
                     color=_color;
                 }
-                void setPoint1(int _p1){
-                    p1=_p1;
-                }
-                void setPoint2(int _p2){
-                    p2=_p2;
-                }
+                void setPoint1(int _x,int _y)
+                {
+                  p1.set_xy(_x,_y);
+                  }
+                void setPoint2(int _x,int _y)
+                 {
+                 p2.set_xy(_x,_y);
+                  }
                 Shape(){
                     color=1;
                     p1=(0,0);
